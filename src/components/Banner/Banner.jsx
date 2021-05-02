@@ -10,14 +10,14 @@ const Banner = () => {
     <div className="banner">
       {/* banner date picker section */}
       <div className="banner__search">
-        {showSearch && <Search />}
         <Button
           onClick={() => setShowSearch(!showSearch)}
           className="banner__searchButton"
           variant="outlined"
         >
-          Search Dates
+          {showSearch ? "Hide" : "Search Dates"}
         </Button>
+        {showSearch && <Search />}
       </div>
 
       {/* banner info section */}
